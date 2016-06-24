@@ -49,8 +49,6 @@ public class SearchActivity extends AppCompatActivity {
 
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +59,6 @@ public class SearchActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-
         setupViews();
 
 
@@ -201,7 +198,6 @@ public class SearchActivity extends AppCompatActivity {
         if(id == R.id.miFilter) {
             Intent i = new Intent(this, AdvancedSearch.class);
             startActivityForResult(i, REQUEST_CODE);
-
         }
 
         return super.onOptionsItemSelected(item);
@@ -216,6 +212,9 @@ public class SearchActivity extends AppCompatActivity {
             news_desk_values = data.getStringArrayListExtra("news_desk_values");
 
                 onAdvancedSearch();
+
+
+
 
         }
 

@@ -64,8 +64,13 @@ public class AdvancedSearch extends AppCompatActivity {
             }
         });
 
-    }
+       /* begin_date = getIntent().getStringExtra("begin_date").toString();
+        EditText etDate = (EditText) findViewById(R.id.etDate);
+        etDate.setText(begin_date);*/
 
+
+
+    }
 
 
 
@@ -107,7 +112,6 @@ public class AdvancedSearch extends AppCompatActivity {
         this.begin_date = etDate.getText().toString();
 
 
-
         Intent data = new Intent();
         data.putExtra("begin_date", begin_date);
         data.putExtra("news_desk_values", news_desk_values);
@@ -115,9 +119,9 @@ public class AdvancedSearch extends AppCompatActivity {
 
         setResult(RESULT_OK, data);
 
+
         finish();
 
     }
-
 
 }
